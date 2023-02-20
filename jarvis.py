@@ -1,6 +1,5 @@
 import os
 import openai
-import json
 from subprocess import run
 
 # On the following line, enter your API key (between the "")
