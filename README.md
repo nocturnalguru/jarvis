@@ -11,6 +11,35 @@ Just run in a seperate terminal
 
 Using PIP or your favorite python package manager install openai and lolcat
 
+
+## Install OpenAI
+
+---------------------------------------------------------------------
+
+
+1. Install Python 3.7 or higher:
+
+Open a terminal window and type the following command to install Python 3.7 or higher:
+
+$ sudo apt-get install python3.7
+
+2. Install pip:
+
+Open a terminal window and type the following command to install pip:
+
+$ sudo apt-get install python-pip
+
+3. Install OpenAI:
+
+Open a terminal window and type the following command to install OpenAI:
+
+$ pip install openai 
+ 
+
+---------------------------------------------------------------------
+
+
+
 ## Install LOLCAT
 
 LOLCAT is just a visutal way to quickly understand who is speaking to provide a clean output for decerning which party is speaking.  Happy sidenote, copy and paste looks pretty clean too.
