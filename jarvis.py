@@ -1,55 +1,46 @@
-#import os
+import os
 import openai
-#import json
+import json
 from subprocess import run
-#import pyttsx3  #python text to speach - consider upgrading to google tts (requires internet)  this one can run offline (but the openai wont work)
 
-#define globals
-#engine = pyttsx3.init()
-
-# Enter your API Key
-api_key = ""
+# On the following line, enter your API key (between the "")
+openai.api_key = ""
 
 header = '''
-   _                  _             _ 
-  (_) __ _ _ ____   _(_)___    __ _(_)
-  | |/ _` | '__\ \ / / / __|  / _` | |
-  | | (_| | |   \ V /| \__ \ | (_| | |
- _/ |\__,_|_|    \_/ |_|___/  \__,_|_|
-|__/                                  
+     _                  _          _    ___
+    | | __ _ _ ____   _(_)___     / \  |_ _|
+ _  | |/ _` | '__\ \ / / / __|   / _ \  | |
+| |_| | (_| | |   \ V /| \__ \  / ___ \ | |
+ \___/ \__,_|_|    \_/ |_|___/ /_/   \_\___|
 
-Initial Date: December 11, 2022
-Last Updated: Feb 11, 2023
-Version: 0.0.7
+Initial Release Date: 12/11/2022
+API: openai ChatGPT(davinci gpt 3)
+Current Version: 0.3.7
+Updated: 2023-02-20-13-12-34
 Author: Paul Johnston
-Github: https://github.com/nocturnalguru/jarvis
-Description: A terminal co-pilot powered by openai (davinci).
-Simply add your API key and away you go.
-For those who work in the terminal and just need an easy way to ask their questions without constantly being asked to login.
+Description: Provides ChatGPT functionality in the terminal when needed.
+(Feels like a co-pilot.)
 
-To exit type 'q' or 'quit' or 'exit'
+to exit, type 'quit' or 'q' and hit enter
 
 '''
 
 run(["lolcat"], input=header, text=True)
 
-
 def RE():
-    #define a few vars
-    divider = '---------------------------------------------------------------------'
-    #take in the input
-    USERREQUEST = input(": ")
-    if (USERREQUEST =="q" or USERREQUEST =="quit" or USERREQUEST == "exit"):
+   divider = '---------------------------------------------------------------------'
+   USERREQUEST = input(": ")
+   if (USERREQUEST =="q" or USERREQUEST =="quit" or USERREQUEST == "exit"):
         quit()
-    response = openai.Completion.create(model="text-davinci-003", prompt=USERREQUEST, temperature=0, max_tokens=2000)
-    run(["lolcat"], input=divider, text=True)
-    output = response["choices"][0]["text"]
-    print(output+" \n \n")
-    run(["lolcat"], input=divider, text=True)
-    #voice  output - uncomment 2 lines below - note,  you need to wait till the speaking is complete to enter another command.
-    #engine.say(output)
-    #engine.runAndWait()
 
+   if USERREQUEST == "":
+       print("")
+   else:
+        response = openai.Completion.create(model="text-davinci-003", prompt=USERREQUEST, temperature=0, max_tokens=2000)
+        run(["lolcat"], input=divider, text=True)
+        output = response["choices"][0]["text"]
+        print(output+" \n \n")
+        run(["lolcat"], input=divider, text=True)
 
 infinitelooper = 0
 
