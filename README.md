@@ -60,4 +60,4 @@ consider setting up an alias from your .bashrc or.bash_aliases to quickly launch
 
 
 
-# Announcement:  This repo is not maintained at all.  A bit of adjustments will be required to upgrade the api (it's that old). ha
+# Announcement:  This repo has not been updated since ChatGPT 3 (Davinci).  To update will require changing the endpoint for the api and adjusting your api key.
