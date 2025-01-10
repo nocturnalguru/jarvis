@@ -57,3 +57,7 @@ LOLCAT is just a visutal way to quickly understand who is speaking to provide a 
 ### Recommended actions for more efficient use of your time. 
 
 consider setting up an alias from your .bashrc or.bash_aliases to quickly launch the ai script
+
+
+
+# Announcement:  This repo is not maintained at all.  A bit of adjustments will be required to upgrade the api (it's that old). ha
